@@ -1,0 +1,12 @@
+
+h1.section {font-size: 32pt; font-style: oblique; color: "$primary"}
+div {margin: auto; align-content: center; text-align: center;}
+hr {width: 75%}
+p {
+    font-size: 16pt;
+    width: 50%;
+    margin:auto;
+    text-align: left;
+    text-indent: 30pt;
+    line-height: normal;
+}
