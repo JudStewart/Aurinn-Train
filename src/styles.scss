@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@import "~@angular/material/theming";
+@import "palettes.scss";
+
+@include mat-core();
+
+$aurinn-train-palette-primary: mat.define-palette($pine-tree);
+$aurinn-train-palette-accent: mat.define-palette($coyote-brown);
+$aurinn-train-palette-warn: mat.define-palette($auburn);
+
+$my-theme: mat.define-light-theme((
+    color: (
+        primary:$aurinn-train-palette-primary,
+        accent:$aurinn-train-palette-accent,
+        warn:$aurinn-train-palette-warn,
+    )
+));
+
+@include mat.core-theme($my-theme);
+@include mat.toolbar-theme($my-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
