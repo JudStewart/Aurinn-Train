@@ -1,0 +1,95 @@
+
+@import '../../styles.scss';
+
+$tier-highlight: map-get($aurinn-train-palette-coyote, 500);
+
+h1.section {
+    font-size: 32pt;
+    color: mat-color($aurinn-train-palette-primary);
+    font-weight: bold;
+}
+div {margin: auto; align-content: center; text-align: center;}
+hr {width: 75%}
+p {
+    font-size: 16pt;
+    width: 50%;
+    margin:auto;
+    text-align: left;
+    text-indent: 30pt;
+    line-height: normal;
+}
+p.available
+{
+    margin-left: 25%;
+    font-size: 18pt;
+    text-decoration: underline;
+    text-indent: 0pt;
+}
+p.quote {
+    font-style: italic;
+    align-content: center;
+    text-align: center;
+    text-indent: 0pt;
+    margin: auto;
+}
+span.can {
+    background-color: #c4ffc5;
+}
+
+span.cant {
+    background-color: #ffb8b8;
+}
+
+span.feat {
+    background-color:lightgoldenrodyellow;
+}
+.tier {
+    background-color: $tier-highlight;
+    color: white;
+}
+
+span.bunder {
+    font-weight: bold; text-decoration: underline;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+h3.boon {
+    font-weight:bold;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+button.add_subtract {
+    margin: 16pt;
+}
+
+li {
+    font-size: 16pt;
+}
+
+h4 {
+    font-size: 20pt;
+    margin-left: 25%;
+    font-weight: bold;
+}
+
+li {
+    margin: 10px;
+}
+
+mat-form-field {
+    width: 25%;
+    text-align: center;
+    font-size: 24pt;
+}
+
+mat-option {
+    text-align: center;
+}
+
+// mat-label {
+//     font-size: 24pt;
+// }
