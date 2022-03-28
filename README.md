@@ -1,4 +1,4 @@
-# Aurinn Train Character Generator (Angular side)
+# Aurinn Train Character Creator
 
 Website to assist in character creation for Aurinn Train. This is the angular side; I may end up writing some of the more complex stuff in a NodeJS backend, in which case it'll be convenient for me to have these separate. Below is the Angular generated read me:
 
