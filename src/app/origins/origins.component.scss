@@ -9,6 +9,20 @@ h1.section {
     font-weight: bold;
 }
 div {margin: auto; align-content: center; text-align: center;}
+div.beside {
+    position:absolute;
+    top: 10px;
+    left:65%;
+    padding:10px;
+    width: 100px;
+}
+div.beside2 {
+    position:absolute;
+    top: -7px;
+    left:65%;
+    padding:10px;
+    width: 100px;
+}
 hr {width: 75%}
 p {
     font-size: 16pt;
@@ -66,6 +80,13 @@ button.add_subtract {
     margin: 16pt;
 }
 
+button.dice {
+    font-size: 24pt;
+    line-height: 24pt;
+    width: auto;
+    height: auto;
+}
+
 li {
     font-size: 16pt;
 }
@@ -80,10 +101,17 @@ li {
     margin: 10px;
 }
 
+button.continue {
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    font-size: 24pt;
+}
+
 mat-form-field {
     width: 25%;
     text-align: center;
-    font-size: 24pt;
+    font-size: 16pt;
 }
 
 mat-option {

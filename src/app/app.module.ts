@@ -8,16 +8,19 @@ import {MatSelectModule} from '@angular/material/select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OriginsComponent } from './origins/origins.component';
+import { CharacterCreationComponent } from './character-creation/character-creation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OriginsComponent,
+    CharacterCreationComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { OriginsComponent } from './origins/origins.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

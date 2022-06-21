@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aurinn-train';
+  
+  origin: any;
+  
+  receiveEvent($event: any) {
+    this.origin = $event
+  }
+  
 }

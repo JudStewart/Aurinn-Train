@@ -3,8 +3,6 @@
 
 <div>
     <br><br>
-    <hr>
-    <br>
     <h1 class="section md-warn">Origins</h1>
     <figure style="font-style: italic;">
         <blockquote style="font-size: 120%">“They come from riches. They come from ruin. <br>
@@ -134,7 +132,7 @@
 
 <br><br>
 
-<div style="font-size: 16pt">
+<div style="font-size: 16pt; position:relative">
 <mat-form-field appearance="fill" color="accent">
     <mat-label>My Origin Type</mat-label>
     <mat-select [formControl]="selected" [(ngModel)]="selectedValue" name="origin-type" [errorStateMatcher]="matcher" (selectionChange)="reset()">
@@ -148,13 +146,17 @@
     </mat-select>
     <mat-error *ngIf="selected.hasError('required')">You must choose an Origin Type.</mat-error>
 </mat-form-field>
+<div class="beside">
+    <button mat-raised-button color="primary" class="dice" (click)="randomizeOriginType()">{{die}}</button>
+</div>
 </div>
 
 <br>
 <hr>
 <br><br>
-<div>
+<div style="position:relative">
     <h1 class="section">Origin Boons</h1>
+    <div class="beside2"><button mat-raised-button color="primary" class="dice" (click)="randomizeBoon()">{{die}}</button></div>
     <p>There are four types of Origin Boons, and each can be selected by spending an Origin Point. You have three, use them wisely. You can choose to invest in a number of separate boons, or use them all for a single one. Bear in mind as well that your selected Origin Type determines whether you may or may not select certain boons.</p>
     <br> <hr> <br>
 </div>
@@ -163,7 +165,6 @@
     <h3 class="boon">Gold</h3> 
     <button mat-raised-button color="warn" class="add_subtract" [disabled]="used() == 3" (click)="gold = gold + 1"> + </button>
     <p class="quote">"They come from riches."</p> <br>
-    todo: why the fuck is this not centered
 </div>
 <div>
     <p style="text-align: center;" [ngClass]="{'tier': gold >= 1}"><span class="bunder">Tier 1</span>: Your character begins with 1000gp.</p> <br>
@@ -207,5 +208,9 @@
     <p style="text-align: center;" [ngClass]="{'tier': power >= 2}"><span class="bunder">Tier 2</span>: Choose a 4th level spell or lower spell. Alternatively, improve your unique spell/ability's power or allow its use twice per day.</p> <br>
     <p style="text-align: center;" [ngClass]="{'tier': power >= 3}"><span class="bunder">Tier 3</span>: Choose a 5th level spell or lower spell. Alternatively, improve your unique spell/ability's power or allow its use three times per day.</p> <br>
 </div>
-
+<br><hr><br>
 <br>
+<div>
+<button mat-raised-button color="primary" class="continue" [routerLink]="['/creation', buildOrigin()]">Continue</button>
+</div>
+<br><br><br>

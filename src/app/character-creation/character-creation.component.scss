@@ -1,0 +1,50 @@
+
+@import '../../styles.scss';
+
+
+div 
+{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    width: 100%
+}
+.fixed 
+{
+    position: fixed;
+}
+hr 
+{
+    width: 75%
+}
+h1.section {
+    font-size: 32pt;
+    color: mat-color($aurinn-train-palette-primary);
+    font-weight: bold;
+}
+
+button.dice {
+    font-size: 24pt;
+    line-height: 24pt;
+    width: auto;
+    height: auto;
+}
+
+div.beside {
+    position:absolute;
+    top: 10px;
+    left:65%;
+    padding:10px;
+    width: 100px;
+}
+
+div.form-field {
+    font-size: 12pt;
+    position: relative
+}
+
+mat-form-field {
+    width: 25%;
+    text-align: center;
+    font-size: 24pt;
+}
