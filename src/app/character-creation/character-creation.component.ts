@@ -23,4 +23,9 @@ export class CharacterCreationComponent implements OnInit {
   ngOnInit(): void {
     this.origin = JSON.parse(this.route.snapshot.paramMap.get('origin')!)
   }
+
+  randomName()
+  {
+    name = Gen.Names.generate()['name']
+  }
 }
