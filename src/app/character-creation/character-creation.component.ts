@@ -21,9 +21,11 @@ export class CharacterCreationComponent implements OnInit {
   race = '';
   genderCustom = '';
   genderChoice = '';
+  class = '';
 
   gen = Gen;
   races = races;
+  classes = classes;
   genders = ['Female', 'Male', 'Other'];
 
   ngOnInit(): void {

@@ -44,9 +44,20 @@
   </mat-form-field>
 </div>
 
-<div class="form-field" *ngIf='genderChoice == "Other"'>
-    <mat-form-field appearance="fill" color="accent">
-        <mat-label>Custom Gender</mat-label>
-        <input matInput [(ngModel)]="genderCustom" />
-    </mat-form-field>
+<div class="form-field" *ngIf="genderChoice == 'Other'">
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Custom Gender</mat-label>
+    <input matInput [(ngModel)]="genderCustom" />
+  </mat-form-field>
+</div>
+
+<div class="form-field">
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Class</mat-label>
+    <mat-select [(ngModel)]="class" name="class-select">
+      <mat-option *ngFor="let c of classes" [value]="c">
+        {{ gen.Utils.formatRace(c) }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
