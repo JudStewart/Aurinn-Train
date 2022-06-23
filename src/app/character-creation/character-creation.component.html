@@ -4,31 +4,49 @@
 <hr>
 </div>
 -->
-<br><br>
+<br /><br />
 
 <div>
-<h1 class="section">Who are you?</h1>
+  <h1 class="section">Who are you?</h1>
 </div>
-<br>
+<br />
 <div class="form-field">
-    <mat-form-field appearance="fill" color="accent">
-        <mat-label>Name</mat-label>
-        <input matInput [(ngModel)]="name">
-    </mat-form-field>
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="name" />
+  </mat-form-field>
 </div>
 <div class="beside">
-    <button mat-raised-button color="primary" class="dice" (click)="randomName()">{{die}}</button>
+  <button mat-raised-button color="primary" class="dice" (click)="randomName()">
+    {{ die }}
+  </button>
 </div>
-<br>
+<br />
 
 <div class="form-field">
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Race</mat-label>
+    <mat-select [(ngModel)]="race" name="race-select">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let r of races" [value]="r">
+        {{ gen.Utils.formatRace(r) }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="form-field">
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Gender</mat-label>
+    <mat-select [(ngModel)]="genderChoice" name="gender-select">
+      <mat-option *ngFor="let g of genders" [value]="g"> {{ g }} </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="form-field" *ngIf='genderChoice == "Other"'>
     <mat-form-field appearance="fill" color="accent">
-        <mat-label>Race</mat-label>
-        <mat-select [(ngModel)]="race" name="race-select">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let r of races" [value]="r">
-                {{gen.Utils.formatRace(r)}}
-            </mat-option>
-        </mat-select>
+        <mat-label>Custom Gender</mat-label>
+        <input matInput [(ngModel)]="genderCustom" />
     </mat-form-field>
 </div>
