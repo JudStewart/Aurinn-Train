@@ -13,7 +13,9 @@ $aurinn-train-palette-warn: mat.define-palette($auburn);
 
 $aurinn-train-palette-background: mat.define-palette($bone);
 $aurinn-train-palette-coyote: mat.define-palette($coyote-brown);
+$aurinn-train-palette-camel: mat.define-palette($camel);
 $background-color: map-get($aurinn-train-palette-background, 500);
+$border-color: map-get($aurinn-train-palette-primary, 500);
 
 $my-theme: mat.define-light-theme((
     color: (
@@ -30,4 +32,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-class-background {
     background-color: $background-color;
+}
+.mat-select-panel {
+    background: $background-color
 }

@@ -9,6 +9,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list'
+import {MatCardModule} from '@angular/material/card'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,8 @@ import { CharacterCreationComponent } from './character-creation/character-creat
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatGridListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

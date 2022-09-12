@@ -1,13 +1,12 @@
 
 @import '../../styles.scss';
 
-
 div 
 {
     margin: auto;
     align-content: center;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 .fixed 
 {
@@ -32,8 +31,16 @@ button.dice {
 
 div.beside {
     position:absolute;
-    top: 10px;
+    top: 0px;
     left:65%;
+    padding:10px;
+    width: 100px;
+}
+
+div.beside-further {
+    position:absolute;
+    top: 0px;
+    left:75%;
     padding:10px;
     width: 100px;
 }
@@ -43,8 +50,39 @@ div.form-field {
     position: relative
 }
 
+.icon-button {
+    background:none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.icon {
+    width: 28px;
+}
+
 mat-form-field {
     width: 25%;
     text-align: center;
     font-size: 24pt;
+}
+
+mat-card {
+    width: 25%;
+    height: auto;
+    margin: auto;
+    text-align: start;
+}
+
+mat-card.lists {
+    width: 15%
+}
+
+mat-card-title {
+    text-align: start;
+}
+
+mat-grid-list {
+    width: 50%;
+    margin: auto
 }
